@@ -1,1 +1,1 @@
-# A simple test
+# A matplotlib bar chart with individual bar colors and legends
