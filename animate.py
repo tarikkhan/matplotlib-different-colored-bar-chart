@@ -25,8 +25,7 @@ def width_animation(bars, fig):
 def height_animation(bars, fig, height_list):
     new_heights = []
     for height in height_list:
-        new_height = np.linspace(0, height, 50)
-        new_heights.append(new_height)
+        new_heights.append(np.linspace(0, height, 50))
 
     
     def init():
