@@ -1,26 +1,29 @@
 import matplotlib.pyplot as plt
-
+import numpy as np
 
 from helpers import scale_values
-from animate import width_animation
+from animate import width_animation, height_animation
 
 
 fig, ax = plt.subplots()
 
 fruits = ['apple', 'blueberry', 'banana', 'orange', 'olive']
 counts = [40, 100, 300, 55, 120]
+starting_height = np.zeros(len(counts))
 
 new_counts = scale_values(counts)
 
 bar_colors_labels = ['red', 'blue', 'gold', 'orange', 'olive']
 
-bars = ax.bar(fruits, new_counts, color=bar_colors_labels, label=bar_colors_labels)
+bars = ax.bar(fruits, starting_height, color=bar_colors_labels, label=bar_colors_labels)
 
 
-width_animation = width_animation(bars, fig)
+
+# width_animation = width_animation(bars, fig)
+height_animation = height_animation(bars, fig, new_counts)
 
 ax.set_ylabel('Fruit Supply')
 ax.set_title('Fruit supply by kind and color')
 ax.legend(title='Fruit color')
-
+ax.set_ylim((0, 1.2))
 plt.show()
