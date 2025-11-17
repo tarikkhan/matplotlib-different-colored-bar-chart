@@ -20,8 +20,12 @@ bars = ax.bar(fruits, starting_height, color=bar_colors_labels, label=bar_colors
 
 
 # width_animation = width_animation(bars, fig)
-height_animation = height_animation(bars, fig, new_counts)
+height_animation = height_animation(bars, fig, ax, new_counts, counts)
 
+# bar label code
+
+
+# axes styles
 ax.set_ylabel('Fruit Supply')
 ax.set_title('Fruit supply by kind and color')
 ax.legend(title='Fruit color')

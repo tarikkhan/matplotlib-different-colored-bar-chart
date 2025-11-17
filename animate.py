@@ -22,7 +22,7 @@ def width_animation(bars, fig):
     )
     return anim
 
-def height_animation(bars, fig, height_list):
+def height_animation(bars, fig, ax, height_list, original_values):
     new_heights = []
     for height in height_list:
         new_heights.append(np.linspace(0, height, 50))
@@ -36,6 +36,8 @@ def height_animation(bars, fig, height_list):
     def update(frame):
         for index, bar in enumerate(bars):
             bar.set_height(new_heights[index][frame])
+        if frame == 49:
+            ax.bar_label(bars, labels=original_values, padding=5)
         return bars
 
     anim = animation.FuncAnimation(
