@@ -23,6 +23,7 @@ def width_animation(bars, fig):
     return anim
 
 def height_animation(bars, fig, ax, height_list, original_values):
+    """ Height animation with values visible at the end """
     new_heights = []
     for height in height_list:
         new_heights.append(np.linspace(0, height, 50))

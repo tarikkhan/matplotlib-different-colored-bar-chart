@@ -13,9 +13,9 @@ starting_height = np.zeros(len(counts))
 
 new_counts = scale_values(counts)
 
-bar_colors_labels = ['red', 'blue', 'gold', 'orange', 'olive']
+bar_colors= ['red', 'blue', 'gold', 'orange', 'olive']
 
-bars = ax.bar(fruits, starting_height, color=bar_colors_labels, label=bar_colors_labels)
+bars = ax.bar(fruits, starting_height, color=bar_colors, label=fruits)
 
 
 
